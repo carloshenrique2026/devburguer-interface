@@ -1,12 +1,12 @@
-import { 
-    Button, 
-    Container, 
-    Form, 
-    InputContainer, 
-    LeftContainer, 
-    Link, 
-    RightContainer, 
-    Title 
+import {
+    Button,
+    Container,
+    Form,
+    InputContainer,
+    LeftContainer,
+    Link,
+    RightContainer,
+    Title
 } from "./styles";
 import Logo from '../../assets/logo.png'
 
@@ -22,6 +22,11 @@ export function Login() {
                     <span>Login e senha.</span>
                 </Title>
                 <Form>
+                    <InputContainer>
+                        <label>Email</label>
+                        <input type="password" />
+                    </InputContainer>
+
                     <InputContainer>
                         <label>Senha</label>
                         <input type="password" />
