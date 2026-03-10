@@ -35,15 +35,59 @@ export const RightContainer = styled.div `
     width: 100%;
     max-width: 50%;
 
-    background:  url('${Background}')
+    background:  url('${Background}');
+    background-color:  #1e1e1e;
+
+    p {
+        color: #fff;
+        font-size: 18px;
+        font-weight: 800;
+    }
+
+    a {
+        text-decoration: underline;
+    }
+
 `;
 
-export const Title = styled.h2 ``;
+export const Title = styled.h2 `
+    font-family: "Road Rage", sans-serif;
+    font-size: 40px;
+    color: #ec2e0cd8;
 
-export const Form = styled.h2 ``;
+    span {
+        color: #9758a6;
+    }
+`;
 
-export const InputContainer = styled.h2 ``;
+export const Form = styled.h2 `
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    width: 100%;
+    max-width: 400px;
+`;
 
-export const Link = styled.a ``;
+export const InputContainer = styled.h2 `
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
 
-export const Button = styled.button ``;
+    input {
+        width: 100%;
+        border: none;
+        height: 52px;
+        border-radius: 5px;
+        padding: 0 16px;
+    }
+
+    label {
+        font-size: 18px;
+        font-weight: 600;
+        color: #fff;
+    }
+`;
+
+
