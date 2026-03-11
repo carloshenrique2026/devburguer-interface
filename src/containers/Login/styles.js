@@ -60,7 +60,7 @@ export const Title = styled.h2 `
     }
 `;
 
-export const Form = styled.h2 `
+export const Form = styled.form `
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -69,7 +69,7 @@ export const Form = styled.h2 `
     max-width: 400px;
 `;
 
-export const InputContainer = styled.h2 `
+export const InputContainer = styled.div `
     display: flex;
     flex-direction: column;
     gap: 5px;
