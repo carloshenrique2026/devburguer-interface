@@ -1,5 +1,6 @@
 import { yupResolver } from '@hookform/resolvers/yup';
 import { useForm } from 'react-hook-form';
+import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import * as yup from 'yup';
 
@@ -13,10 +14,12 @@ import {
     InputContainer,
     LeftContainer,
     RightContainer,
-    Title
+    Title,
+    Link
 } from "./styles";
 
 export function Register() {
+    const navigate = useNavigate();
     const schema = yup
         .object({
             name: yup.string().required('O nome é Obrigatório'),
@@ -44,20 +47,32 @@ export function Register() {
     console.log(errors)
 
     const onSubmit = async (data) => {
-        const response = await toast.promise(
-            api.post('/users', {
-                name: data.name,
-                email: data.email,
-                password: data.password,
-            }),
-            {
-                pending: 'Verifique seus dados',
-                success: 'Cadastro efetuado com Sucesso! 👌',
-                error: 'Ops, algo deu errado! Tente novamente. 🤯'
-            },
-        );
+        try {
+            const { status } = await api.post(
+                '/users',
+                {
+                    name: data.name,
+                    email: data.email,
+                    password: data.password,
+                },
+                {
+                    validateStatus: () => true,
+                },
+            );
 
-        console.log(response);
+            if (status === 200 || status === 201) {
+                setTimeout(() => {
+                    navigate('/login');
+                }, 2000);
+                toast.success('Conta criada com sucesso, efetue seu Login');
+            } else if (status === 409) {
+                toast.error('Email ja cadastrado! Faça o login para continuar');
+            } else {
+                throw new Error();
+            }
+        } catch (error) {
+            toast.error("Falha no Sistema Tente novamente");
+        }
     };
 
     return (
@@ -92,7 +107,7 @@ export function Register() {
                     <Button type="submit">Criar Conta</Button>
                 </Form>
                 <p>
-                    Já possui conta ? <a>Clique aqui.</a>
+                    Já possui conta ? <Link to="/login">Clique aqui.</Link>
                 </p>
             </RightContainer>
         </Container>
