@@ -5,6 +5,7 @@ import 'react-multi-carousel/lib/styles.css';
 import { api } from '../../services/api';
 import { Container, Title } from './styles';
 import { CardProduct } from '../CardProduct';
+import { formatPrice } from '../../utils/formatPrice';
 
 export function OffersCarousel() {
     const [offers, setOffers] = useState([]);
@@ -12,9 +13,16 @@ export function OffersCarousel() {
     useEffect(() => {
         async function loadProducts() {
             const { data } = await api.get('/products');
-            const onlyOffers = data.filter((product) => product.offer);
+            
+            const onlyOffers = data
+                .filter((product) => product.offer)
+                .map((product) => ({
+                    currencyValue: formatPrice(product.price),
+                    ...product
+                }));
+
             setOffers(onlyOffers);
-            }
+        }
         loadProducts();
     }, []);
     const responsive = {
@@ -37,7 +45,7 @@ export function OffersCarousel() {
 
     };
 
-    return(
+    return (
         <Container>
             <Title>Ofertas do Dia</Title>
 
@@ -46,11 +54,11 @@ export function OffersCarousel() {
                 infinite={true}
                 partialVisible={false}
                 itemClass="carousel-item"
-                >
-                    {offers.map( product => (
-                        <CardProduct key={product.id} product={product} />
-                    ))}              
-            </Carousel>        
+            >
+                {offers.map(product => (
+                    <CardProduct key={product.id} product={product} />
+                ))}
+            </Carousel>
         </Container>
     );
 }
