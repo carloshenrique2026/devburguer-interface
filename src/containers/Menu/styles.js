@@ -1,8 +1,8 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-import BannerHamburger from '../../assets/banner-hamburger.svg';
 import Background from '../../assets/background-svg.svg';
-import { Link } from "react-router-dom";
+import BannerHamburger from '../../assets/banner-hamburger.svg';
 
 export const Container = styled.div`
     width: 100%;
@@ -56,13 +56,14 @@ export const CategoryMenu = styled.div`
 
 export const CategoryButton = styled(Link)`
     text-decoration: none;
+    cursor: pointer;
     background: none;
-    color: #9758a6;
+    color: ${(props) => (props.$isActiveCategory ? '#9758a6' : '#9b9b9b')};
     font-size: 23px;
     font-weight: 500;
     padding-bottom: 5px;
     line-height: 20px;
-    border-bottom: 3px solid #9758a6;
+    border-bottom: ${(props) => props.$isActiveCategory && '3px solid #9758a6'};
 `;
 
 export const ProductsContainer = styled.div`
