@@ -2,9 +2,10 @@ import { CategoriesCarousel } from '../../components/CategoriesCarousel';
 import { OffersCarousel } from '../../components/OffersCarousel';
 import { useNavigate } from 'react-router-dom';
 import { Banner, Container } from './styles';
+import { useUser } from '../../hooks/UserContext';
 
 export function Home() {
-     const navigate = useNavigate();
+        const navigate = useNavigate();
     return (
         <main>
             <Banner>
