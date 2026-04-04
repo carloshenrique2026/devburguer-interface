@@ -20,7 +20,7 @@ export const UserProvider = ({ children }) => {
         const  userInfoLocalStorage = localStorage.getItem('devburger:userData');
 
         if (userInfoLocalStorage){
-            setUserInfo(JSON.parse(userInfoLacalStorage));
+            setUserInfo(JSON.parse(userInfoLocalStorage));
         }
     }, []);
 
