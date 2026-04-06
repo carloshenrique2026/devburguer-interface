@@ -5,6 +5,9 @@ import { Login } from "../containers/Login";
 import { Register } from "../containers/Register";
 import { Menu } from "../containers/Menu";
 import { Header } from "../components/Header";
+import { Cart } from '../containers/Cart';
+import { Footer } from "../components/Footer";
+
 
 export const router = createBrowserRouter([
     {
@@ -13,6 +16,7 @@ export const router = createBrowserRouter([
             <>
              <Header />
              <Home />
+             <Footer />
             </>
         ),
        
@@ -33,5 +37,9 @@ export const router = createBrowserRouter([
              <Menu />
             </>
         ),
+    },
+    {
+        path: '/carrinho',
+        element: <Cart />
     },
 ]);
