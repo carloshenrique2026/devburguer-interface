@@ -3,7 +3,7 @@ import { ContainerButton } from './styles';
 
 export function CartButton({ ...props }) {
     return (
-        <ContainerButton>
+        <ContainerButton {...props}>
             <img src={Cart} alt='carrinho-de-comprasd' />
         </ContainerButton>
     );
