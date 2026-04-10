@@ -1,25 +1,17 @@
-import { CategoriesCarousel } from '../../components/CategoriesCarousel';
-import { OffersCarousel } from '../../components/OffersCarousel';
-import { useNavigate } from 'react-router-dom';
+import { OffersCarousel, CategoriesCarousel } from '../../components';
 import { Banner, Container } from './styles';
-import { useUser } from '../../hooks/UserContext';
+
 
 export function Home() {
-        const navigate = useNavigate();
     return (
         <main>
             <Banner>
-                <button onClick={() => navigate(-1)}>
-                    ⬅ Voltar
-                </button>
-
-
                 <h1>Bem-Vindos</h1>
             </Banner>
             <Container>
                 <div>
                     <CategoriesCarousel />
-                    <OffersCarousel /> 
+                    <OffersCarousel />
                 </div>
             </Container>
         </main>
