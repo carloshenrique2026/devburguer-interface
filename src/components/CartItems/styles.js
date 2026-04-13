@@ -6,10 +6,35 @@ export const ProductImage = styled.img`
     border-radius: 16px;
 `;
 
-export  const ButtonGoup = styled.div`
+export  const ButtonGroup = styled.div`
     display: flex;
     align-items: center;
     gap: 12px;
+
+    button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 30px;
+        width: 30px;
+        color: #fff;
+        border-radius: 4px;
+        background-color: #9758ac;
+        transition: all 0,4s;
+        border: none;
+
+        &:hover {
+            background-color: #6f357c;
+        }
+    }
 `;
 
-export const EmptyCart = styled.p``;
+export const EmptyCart = styled.p`
+    font-size: 2px;
+    text-align: center;
+    font-weight: bold;
+`;
+
+export const ProducTotalPrice = styled.p`
+    font-weight: bold;
+`;
