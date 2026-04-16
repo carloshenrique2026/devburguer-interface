@@ -1,43 +1,60 @@
 import styled from 'styled-components';
+
+import Background from '../../assets/background-10.png';
 import Texture from '../../assets/texture.svg';
 
 export const Container = styled.div`
     width: 100%;
-    background-color: #ffffff;
-    min-height: 100%;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* centraliza tudo horizontalmente */
-  justify-content: center;
+    background: linear-gradient(
+        rgba(255, 255, 255, 0.6),
+        rgba(255, 255, 255,  0.6)
+    ),
+    url('${Background}');
+    min-height: 100vh;
 `;
 
 export const Banner = styled.div`
     background: url('${Texture}');
-    width: 100%;          /* ocupa toda largura */
-    margin-bottom: 20px;
+    background-color: #1f1f1f;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center; 
+    align-items: center;     
+    position: relative;
 
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+    height: 180px;
 
-  display: flex;
-  justify-content: center; /* centraliza horizontal */
-  align-items: center;     /* centraliza vertical */
-
+    img {
+      height: 130px;
+    }
 `;
 
 export const Title = styled.div`
-  color: green; /* cor do título */
+  font-size: 32px;
+  font-weight: 800;
+  padding-bottom: 12px;
+  color: #61a120;
   text-align: center;
-  margin-bottom: 20px;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    left: calc(50% + -28px);
+    bottom: 0;
+    content: '';
+    width: 56px;
+    height: 4px;
+    background-color: #61a120;
+  }
 `;
 
 export const Content = styled.div`
-  display: flex;
-  flex-direction: column; /* ou row se quiser lado a lado */
-  align-items: center;   /* centraliza horizontal */
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 1fr 35%;
+  gap: 40px;
   width: 100%;
-  max-width: 800px; /* limita largura */
+  max-width: 1280px; 
+  padding: 40px;
+  margin: 0 auto;
 `;
