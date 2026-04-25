@@ -58,12 +58,12 @@ export const CategoryButton = styled(Link)`
     text-decoration: none;
     cursor: pointer;
     background: none;
-    color: ${(props) => (props.$isActiveCategory ? '#9758a6' : '#9b9b9b')};
+    color: ${(props) => (props.$isActiveCategory ? '${(props) => props.theme.purple}' : '#9b9b9b')};
     font-size: 23px;
     font-weight: 500;
     padding-bottom: 5px;
     line-height: 20px;
-    border-bottom: ${(props) => props.$isActiveCategory && '3px solid #9758a6'};
+    border-bottom: ${(props) => props.$isActiveCategory && `3px solid ${(props) => props.theme.purple}}`};
 `;
 
 export const ProductsContainer = styled.div`

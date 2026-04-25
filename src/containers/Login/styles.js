@@ -58,7 +58,7 @@ export const Title = styled.h2 `
     color: #ec2e0cd8;
 
     span {
-        color: #9758a6;
+        color: ${(props) => props.theme.purple};
     }
 `;
 
@@ -94,7 +94,7 @@ export const InputContainer = styled.div `
     p {
         font-size: 14px;
         line-height: 80%;
-        color: #cf3057;
+        color: ${(props) => props.theme.darkRed};
         font-weight: 600;
         height: 10px;
     }
