@@ -1,12 +1,24 @@
+import { Elements } from "@stripe/react-stripe-js";
 import { useLocation } from "react-router-dom";
 
-export function Checkout() {
-    const location = useLocation();
+import stripePromise from '../../config/stripeConfig';
+import { CheckoutForm } from '../../components';
 
-    console.log(location);
+export function Checkout() {
+    //const {
+       // state: { clientSecret }
+    //} = useLocation();
+
+    const location = useLocation();
+    const clientSecret = location.state?.clientSecret;
+
+    if (!clientSecret) {
+        return <div>Error, volte e tente novamente</div>
+    }
+    
     return (
-        <div>
-            <h1>Checkout</h1>
-        </div>
+        <Elements stripe={stripePromise} options={{ clientSecret }}>
+            <CheckoutForm />
+        </Elements>
     );
 }
