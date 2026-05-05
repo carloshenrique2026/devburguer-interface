@@ -1,5 +1,5 @@
 import { UserCircleIcon , ShoppingCartIcon } from '@phosphor-icons/react';
-import { useNavigate, useResolvedPath } from 'react-router-dom'; 
+import { useNavigate, useLocation } from 'react-router-dom'; 
 
 import { useUser } from '../../hooks/UserContext';
 import {
@@ -12,19 +12,19 @@ import {
     Profile,
     Contant
 } from './styles';
-import { use } from 'react';
 
-export function Header() {
+
+export default function Header() {
     const navigate = useNavigate();
     const { logout, userInfo} = useUser();
 
-    const { pathname } = useResolvedPath();
+    const { pathname } = useLocation();
 
     function logoutUser() {
         logout();
         navigate('/login');
     }
-    console.log(userInfo);
+   
     return (
         <Container>
             <Contant>

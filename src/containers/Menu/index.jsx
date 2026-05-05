@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 
-import { CardProduct } from '../../components/CardProduct';
+import { CardProduct } from '../../components';
 import { api } from '../../services/api';
 import { formatPrice } from '../../utils/formatPrice';
 import {
@@ -12,7 +12,7 @@ import {
     CategoryButton
 } from './styles';
 
-export function Menu() {
+export default function Menu() {
     const [categories, setCategories] = useState([]);
     const [products, setProducts] = useState([]);
     const [filteredProducts, setFilteredProducts] = useState([]);

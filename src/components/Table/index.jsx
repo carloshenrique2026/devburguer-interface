@@ -8,3 +8,5 @@ export const Table = {
     Th, 
     Tr,
 };
+
+export default Table;

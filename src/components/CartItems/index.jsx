@@ -10,7 +10,7 @@ import {
     TrashImage
 } from './styles';
 
-export function CartItems() {
+export default function CartItems() {
     const { cartProducts, decreaseProduct, increaseProduct, deleteProduct } = useCart();
 
     return (

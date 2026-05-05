@@ -4,7 +4,7 @@ import { useLocation } from "react-router-dom";
 import stripePromise from '../../config/stripeConfig';
 import { CheckoutForm } from '../../components';
 
-export function Checkout() {
+export default function Checkout() {
     //const {
        // state: { clientSecret }
     //} = useLocation();

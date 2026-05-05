@@ -5,7 +5,7 @@ import { toast } from 'react-toastify';
 import * as yup from 'yup';
 
 import Logo from '../../assets/logo.png';
-import { Button } from '../../components/Button';
+import {Button} from '../../components';
 import { api } from '../../services/api';
 
 import {
@@ -18,7 +18,7 @@ import {
     Link
 } from "./styles";
 
-export function Register() {
+export default function Register() {
     const navigate = useNavigate();
     const schema = yup
         .object({

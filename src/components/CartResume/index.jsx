@@ -5,10 +5,10 @@ import { toast } from 'react-toastify';
 import { useCart } from '../../hooks/CartContext';
 import { api } from '../../services/api';
 import { formatPrice } from '../../utils/formatPrice';
-import { Button } from '../Button';
+import Button from '../Button';
 import { Container } from './styles';
 
-export function CartResume() {
+export default function CartResume() {
     const [finalPrice, setFinalPrice] = useState(0);
     const [deliveryTax] = useState(500);
 

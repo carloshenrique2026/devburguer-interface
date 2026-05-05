@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import * as yup from 'yup';
 
 import Logo from '../../assets/logo.png';
-import { Button } from '../../components/Button';
+import { Button } from '../../components';
 import { useUser } from '../../hooks/UserContext';
 import { api } from '../../services/api';
 
@@ -19,7 +19,7 @@ import {
     Link
 } from "./styles";
 
-export function Login() {
+export default function Login() {
     const  navigate = useNavigate();
     const { putUserData } = useUser();
 
