@@ -12,7 +12,7 @@ import {
     CategoryButton
 } from './styles';
 
-export default function Menu() {
+export function Menu() {
     const [categories, setCategories] = useState([]);
     const [products, setProducts] = useState([]);
     const [filteredProducts, setFilteredProducts] = useState([]);

@@ -2,7 +2,7 @@ import Logo from '../../assets/logo1.svg';
 import { CartItems, CartResume } from '../../components';
 import { Banner, Container, Content, Title } from './styles';
 
-export default function Cart() {
+export function Cart() {
     return (
         <Container>
             <Banner>

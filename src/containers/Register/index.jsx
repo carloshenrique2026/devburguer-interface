@@ -18,7 +18,7 @@ import {
     Link
 } from "./styles";
 
-export default function Register() {
+export function Register() {
     const navigate = useNavigate();
     const schema = yup
         .object({

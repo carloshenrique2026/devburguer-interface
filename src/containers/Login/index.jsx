@@ -19,8 +19,8 @@ import {
     Link
 } from "./styles";
 
-export default function Login() {
-    const  navigate = useNavigate();
+export function Login() {
+    const navigate = useNavigate();
     const { putUserData } = useUser();
 
     const schema = yup
@@ -45,7 +45,7 @@ export default function Login() {
     console.log(errors)
 
     const onSubmit = async (data) => {
-        
+
         const { data: userData } = await toast.promise(
             api.post('/sessions', {
                 email: data.email,
@@ -56,7 +56,12 @@ export default function Login() {
                 success: {
                     render() {
                         setTimeout(() => {
-                            navigate('/');
+                            if (userData?.admin) {
+                                navigate('/admin/pedidos');
+                            } else {
+                                navigate('/');
+                            }
+
                         }, 2000);
                         return 'Seja Bem-vindo(a)';
                     },
@@ -65,7 +70,7 @@ export default function Login() {
             },
         );
         putUserData(userData);
-       };
+    };
 
     return (
         <Container>

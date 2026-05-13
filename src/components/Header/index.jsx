@@ -14,7 +14,7 @@ import {
 } from './styles';
 
 
-export default function Header() {
+export function Header() {
     const navigate = useNavigate();
     const { logout, userInfo} = useUser();
 

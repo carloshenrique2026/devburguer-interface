@@ -10,7 +10,7 @@ import { useCart } from "../../../hooks/CartContext";
 import { api } from "../../../services/api";
 import { toast } from "react-toastify";
 
-export default function CheckoutForm() {
+export function CheckoutForm() {
     const { cartProducts, clearCart } = useCart();
     const navigate = useNavigate();
     const stripe = useStripe();

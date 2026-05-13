@@ -1,7 +1,7 @@
 import { OffersCarousel, CategoriesCarousel, Button  } from '../../components';
 import { Banner, Container } from './styles';
 
-export default function Home() {
+export function Home() {
     return (
         <main>
             <Banner>

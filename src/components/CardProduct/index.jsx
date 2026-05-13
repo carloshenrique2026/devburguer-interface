@@ -2,10 +2,10 @@ import PropTypes from "prop-types";
 
 import { useCart } from '../../hooks/CartContext';
 import { CardImage, Container } from "./styles";
-import CartButton from "../CartButton";
+import { CartButton } from "../CartButton";
 
 
-export default function CardProduct({ product }) {
+export function CardProduct({ product }) {
     const { putProductInCart } = useCart();
     return (
         <Container>

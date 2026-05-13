@@ -50,7 +50,7 @@ const STATUS_CONTENT_MAP = {
     }
 };
 
-export default function CompletePayment() {
+export function CompletePayment() {
     const stripe = useStripe();
 
     const [status, setStatus] = useState("default");

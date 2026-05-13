@@ -6,7 +6,7 @@ import { api } from '../../services/api';
 import { CategoryButton, Container, ContainerItems, Title } from './styles';
 import { useNavigate } from 'react-router-dom';
 
-export default function CategoriesCarousel() {
+export function CategoriesCarousel() {
     const [categories, setCategories] = useState([]);
     const navigate = useNavigate();
 
