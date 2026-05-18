@@ -36,11 +36,11 @@ export function Orders() {
     };
   }
 
-    useEffect(() => {
-      const newRows = orders.map((order) => createData(order));
+  useEffect(() => {
+    const newRows = orders.map((order) => createData(order));
 
-      setRows(newRows);
-    }, [orders]);
+    setRows(newRows);
+  }, [orders]);
 
   return (
     <TableContainer component={Paper}>
@@ -55,9 +55,9 @@ export function Orders() {
           </TableRow>
         </TableHead>
         <TableBody>
-        {/*  {rows.map((row) => (
+          {rows.map((row) => (
             <Row key={row._id} row={row} />
-          ))} */}
+          ))}
         </TableBody>
       </Table>
     </TableContainer>
