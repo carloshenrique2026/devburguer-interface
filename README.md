@@ -40,11 +40,13 @@ A aplicação permite autenticação de usuários, gerenciamento de produtos e c
 * Painel administrativo
 
 ## Demonstração
+![OrderFlow Demo](./src/assets/Animação-overflow.gif)
 
-[Adicionar GIF aqui]
 
 ## Screenshots
-
+![Home](./src/assets/home-page.png)
+![Home](./src/assets/produ.png)
+![Home](./src/assets/products-page.png)
 [Adicionar screenshots aqui]
 
 ## Próximas Melhorias
