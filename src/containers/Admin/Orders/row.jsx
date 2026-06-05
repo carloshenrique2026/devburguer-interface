@@ -94,7 +94,8 @@ export function Row({ row, setOrders, orders }) {
                       <TableCell>{product.name}</TableCell>
                       <TableCell>{product.category}</TableCell>
                       <TableCell>
-                        <ProductImage src={product.url} alt={product.name} />
+                        src={`${api.defaults.baseURL}/uploads/${product.path}`}
+                        alt={product.name}
                       </TableCell>
                     </TableRow>
                   ))}
@@ -128,3 +129,5 @@ Row.propTypes = {
     status: PropTypes.string.isRequired,
   }).isRequired,
 };
+
+/*<ProductImage src={product.url} alt={product.name} />*/
