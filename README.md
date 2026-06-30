@@ -54,7 +54,7 @@ A aplicação permite autenticação de usuários, gerenciamento de produtos e c
 
 # 🎥 Demonstração
 
-![OrderFlow Demo](./assets/animacao-overflow.gif)
+![OrderFlow Demo](./src/assets/animacao-overflow.gif)
 
 ---
 
