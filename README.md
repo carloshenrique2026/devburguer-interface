@@ -69,13 +69,21 @@ A aplicação permite autenticação de usuários, gerenciamento de produtos e c
 
 ## 🔐 Login
 
-![Login](./assets/login-page.png)
+<h3>🏠 Página Inicial</h3>
+
+<p align="center">
+  <img src="./assets/home-page.png" width="900"/>
+</p>
 
 ---
 
 ## 🍔 Produtos
 
-![Produtos](./assets/products-page.png)
+<h3>🍔 Produtos</h3>
+
+<p align="center">
+  <img src="./assets/products-page.png" width="900"/>
+</p>
 
 ---
 
