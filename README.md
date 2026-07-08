@@ -59,10 +59,11 @@ A aplicação permite autenticação de usuários, gerenciamento de produtos e c
 ---
 
 # 📸 Screenshots
+<h3>🏠 Página Inicial</h3>
 
-## 🏠 Página Inicial
-
-![Home](./assets/home-page.png)
+<p align="center">
+  <img src="./assets/home-page.png" width="900"/>
+</p>
 
 ---
 
