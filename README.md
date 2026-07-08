@@ -95,7 +95,7 @@ A aplicação permite autenticação de usuários, gerenciamento de produtos e c
 
 ## 💳 Checkout
 
-![Checkout](./assets/checkout-page.png)
+![Checkout](./assets/checkout-pagamento.png)
 
 ---
 
